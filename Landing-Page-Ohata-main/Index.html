@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- [ALTERAR AQUI]: Você pode mudar o título da aba do navegador abaixo -->
+    <title>E-Good | Calculadora de Mobilidade Sustentável</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        /* [ALTERAR AQUI - CSS]: Aqui definimos a cor base que você pediu */
+        :root {
+            --cor-principal: hsl(192, 85%, 45%); /* Azul/Ciano */
+            --cor-principal-hover: hsl(192, 85%, 35%); /* Tom mais escuro para o hover dos botões */
+            --cor-fundo-claro: hsl(192, 85%, 96%); /* Fundo bem claro usando a mesma paleta */
+        }
+
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
+        section { padding: 80px 0; }
+        
+        /* Classes personalizadas com a sua cor */
+        .bg-main { background-color: var(--cor-principal) !important; color: white; }
+        .bg-light-main { background-color: var(--cor-fundo-claro); }
+        .text-main { color: var(--cor-principal) !important; }
+        .icon-box { font-size: 2.5rem; color: var(--cor-principal); margin-bottom: 15px; }
+        
+        .btn-main { background-color: var(--cor-principal); color: white; border: none; }
+        .btn-main:hover { background-color: var(--cor-principal-hover); color: white; }
+        
+        .btn-outline-main { border: 2px solid var(--cor-principal); color: var(--cor-principal); background: transparent; }
+        .btn-outline-main:hover { background-color: var(--cor-principal); color: white; }
+
+    .placeholder-img { 
+            background-color: transparent; 
+            height: auto; /* Destrava a altura para acompanhar a imagem */
+            border-radius: 8px; 
+            overflow: hidden;
+        }
+        
+        .placeholder-img img { 
+            width: 100%; 
+            height: auto; /* Permite que a imagem mostre seu tamanho real sem cortes */
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-main fixed-top shadow-sm">
+        <div class="container">
+            <!-- [ALTERAR AQUI]: Nome do projeto na barra de navegação superior -->
+            <a class="navbar-brand fw-bold" href="#">E-Good</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#main">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#problema">Problema</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#solucao">Solução</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#documentacao">Documentação</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. MAIN SECTION (SEÇÃO PRINCIPAL) -->
+    <section id="main" class="bg-light-main mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <!-- [ALTERAR AQUI]: Título principal da página -->
+                    <h1 class="display-4 fw-bold text-main">E-Good</h1>
+                    <!-- [ALTERAR AQUI]: Subtítulo -->
+                    <h3 class="h4 mb-3 text-dark">Calculadora de Impacto e Custo Veicular</h3>
+                    <!-- [ALTERAR AQUI]: Breve descrição (pitch de elevador) -->
+                    <p class="lead">Compare de forma clara o impacto econômico e ambiental entre veículos elétricos e a combustão, potencializando sua economia com o uso de painéis solares.</p>
+                    
+                    <a href="#demonstracao" class="btn btn-main btn-lg mt-3">Ver Demonstração</a>
+                    <!-- [ALTERAR AQUI]: Coloque o link real do seu material de pitch no href="" abaixo -->
+                    <a href="https://beecode.base44.app/" class="btn btn-outline-main btn-lg mt-3 ms-2">Link do Projeto</a>
+                </div>
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <div class="placeholder-img shadow-sm">
+                        <!-- [ALTERAR AQUI]: Troque o src="URL_DA_SUA_IMAGEM" para a imagem do seu banner digital ou tela do sistema -->
+                        <img src="/Assets/BANNER.png" alt="Banner do Projeto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. PROBLEMA -->
+    <section id="problema">
+        <div class="container">
+            <h2 class="text-center mb-5 text-main fw-bold">O Problema</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- [ALTERAR AQUI]: Textos explicando o problema que o projeto resolve -->
+                    <h4 class="text-dark">Contexto e Dificuldades</h4>
+                    <p>A transição para a mobilidade elétrica gera dúvidas financeiras e de infraestrutura. Os usuários enfrentam dificuldades para calcular o real Retorno Sobre o Investimento (ROI) de um carro elétrico frente às flutuações do preço dos combustíveis fósseis e aos altos custos de manutenção tradicionais.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4 class="text-dark">Impacto e Dados</h4>
+                    <ul class="list-group list-group-flush">
+                        <!-- [ALTERAR AQUI]: Insira dados/estatísticas reais nos itens da lista abaixo -->
+                        <li class="list-group-item"><i class="bi bi-graph-up-arrow text-danger"></i> Alta volatilidade no preço da gasolina e etanol.</li>
+                        <li class="list-group-item"><i class="bi bi-cloud-haze2 text-secondary"></i> Emissões crescentes de CO2 por veículos leves.</li>
+                        <li class="list-group-item"><i class="bi bi-question-circle text-warning"></i> Falta de ferramentas que integrem o custo da energia solar residencial ao cálculo veicular.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SOLUÇÃO PROPOSTA -->
+    <section id="solucao" class="bg-light">
+        <div class="container text-center">
+            <h2 class="mb-5 text-main fw-bold">A Solução</h2>
+            <!-- [ALTERAR AQUI]: Texto resumo da solução (Proposta de valor) -->
+            <p class="lead w-75 mx-auto mb-5 text-dark">Uma plataforma web que simula o custo total de propriedade (TCO) comparando veículos elétricos e a combustão, integrando as métricas de geração de energia solar residencial.</p>
+            <div class="row">
+                <!-- Benefício 1 -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <i class="bi bi-calculator icon-box"></i>
+                            <!-- [ALTERAR AQUI]: Nome do diferencial 1 -->
+                            <h5 class="card-title text-dark">Cálculo Preciso</h5>
+                            <!-- [ALTERAR AQUI]: Descrição do diferencial 1 -->
+                            <p class="card-text">Compara custos de abastecimento vs. recarga com base na tarifa de energia local.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Benefício 2 -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <i class="bi bi-sun icon-box"></i>
+                            <!-- [ALTERAR AQUI]: Nome do diferencial 2 -->
+                            <h5 class="card-title text-dark">Integração Solar</h5>
+                            <!-- [ALTERAR AQUI]: Descrição do diferencial 2 -->
+                            <p class="card-text">Diferencial exclusivo que calcula a economia gerada ao recarregar o carro usando energia solar própria.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Benefício 3 -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <i class="bi bi-tree icon-box"></i>
+                            <!-- [ALTERAR AQUI]: Nome do diferencial 3 -->
+                            <h5 class="card-title text-dark">Proposta de Valor</h5>
+                            <!-- [ALTERAR AQUI]: Descrição do diferencial 3 -->
+                            <p class="card-text">Decisões financeiras baseadas em dados aliadas à sustentabilidade ambiental.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. FUNCIONALIDADES -->
+    <section id="funcionalidades">
+        <div class="container">
+            <h2 class="text-center mb-5 text-main fw-bold">Funcionalidades do Sistema</h2>
+            <div class="row g-4 text-center">
+                <!-- Funcionalidade 1 -->
+                <div class="col-md-4 col-sm-6">
+                    <i class="bi bi-fuel-pump icon-box"></i>
+                    <!-- [ALTERAR AQUI]: Nome da Funcionalidade -->
+                    <h5 class="text-dark">1. Comparador de Custos</h5>
+                    <!-- [ALTERAR AQUI]: Descrição e Benefício -->
+                    <p class="text-muted">Mostra a diferença de gastos mensais entre gasolina/etanol e quilowatt-hora (kWh).<br><strong class="text-dark">Benefício:</strong> Previsibilidade financeira.</p>
+                </div>
+                <!-- Funcionalidade 2 -->
+                <div class="col-md-4 col-sm-6">
+                    <i class="bi bi-house-gear icon-box"></i>
+                    <h5 class="text-dark">2. Simulador de Painel Solar</h5>
+                    <p class="text-muted">Calcula a amortização do carro caso a residência possua placas fotovoltaicas.<br><strong class="text-dark">Benefício:</strong> Maximização do ROI.</p>
+                </div>
+                <!-- Funcionalidade 3 -->
+                <div class="col-md-4 col-sm-6">
+                    <i class="bi bi-car-front icon-box"></i>
+                    <h5 class="text-dark">3. Estimador de Manutenção</h5>
+                    <p class="text-muted">Compara o custo de manutenção preventiva (óleo, filtros vs. elétricos).<br><strong class="text-dark">Benefício:</strong> Visão de longo prazo.</p>
+                </div>
+                <!-- Funcionalidade 4 -->
+                <div class="col-md-6 col-sm-6 mt-4">
+                    <i class="bi bi-globe-americas icon-box"></i>
+                    <h5 class="text-dark">4. Pegada de Carbono</h5>
+                    <p class="text-muted">Converte a quilometragem rodada em emissões de CO2 evitadas.<br><strong class="text-dark">Benefício:</strong> Consciência ambiental.</p>
+                </div>
+                <!-- Funcionalidade 5 -->
+                <div class="col-md-6 col-sm-12 mt-4">
+                    <i class="bi bi-map icon-box"></i>
+                    <h5 class="text-dark">5. Simulação de Rotas</h5>
+                    <p class="text-muted">Insira seu trajeto diário para um cálculo personalizado de desgaste e custo.<br><strong class="text-dark">Benefício:</strong> Resultado adaptado ao usuário.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. TECNOLOGIAS UTILIZADAS -->
+    <section id="tecnologias" class="bg-light-main">
+        <div class="container text-center">
+            <h2 class="mb-5 text-main fw-bold">Tecnologias Utilizadas</h2>
+            <p class="text-dark">O projeto e a landing page foram construídos utilizando as seguintes ferramentas:</p>
+            <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+                <!-- [ALTERAR AQUI]: Adicione ou remova tecnologias preenchendo o texto dos spans -->
+                <span class="badge bg-dark p-3 fs-6">HTML5 & CSS3</span>
+                <span class="badge bg-dark p-3 fs-6">JavaScript</span>
+                <span class="badge bg-dark p-3 fs-6">Bootstrap 5</span>
+                <span class="badge bg-dark p-3 fs-6">Figma (Prototipação)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ARQUITETURA DA SOLUÇÃO -->
+    <section id="arquitetura">
+        <div class="container text-center">
+            <h2 class="mb-5 text-main fw-bold">Arquitetura da Solução</h2>
+            <p class="text-dark">Representação da estrutura do sistema e comunicação entre os componentes:</p>
+                        <div class="placeholder-img mx-auto" style="max-width: 1000px; height: auto;">
+                                <img src="/Assets/arquite.png" alt="Diagrama de Arquitetura">
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. UX/UI E PROTÓTIPOS -->
+  <section id="prototipos" class="bg-light">
+        <div class="container text-center">
+            <h2 class="mb-5 text-main fw-bold">UX/UI e Protótipos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="placeholder-img h-100">
+                                                <img src="/Assets/wireframe de alta qualidade.png" alt="Wireframe">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="placeholder-img h-100">
+                                                <img src="/Assets/sistema.png" alt="Tela">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="placeholder-img h-100">
+                                                                        <img src="/Assets/fluxo navegação.jpeg" alt="Fluxo" style="max-width: 50%; margin: 0 auto;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. PÚBLICO-ALVO E PERSONAS -->
+    <section id="personas">
+        <div class="container">
+            <h2 class="text-center mb-5 text-main fw-bold">Público-Alvo e Personas</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- [ALTERAR AQUI]: Texto descrevendo o perfil do usuário -->
+                    <h5 class="text-dark">Perfil do Usuário</h5>
+                    <p class="text-muted">Motoristas que utilizam veículos diariamente, motoristas de aplicativo, e proprietários de residências com interesse ou posse de energia solar.</p>
+                </div>
+                <div class="col-md-6">
+                    <!-- [ALTERAR AQUI]: Texto descrevendo a dor/necessidade do usuário -->
+                    <h5 class="text-dark">Contexto e Necessidade</h5>
+                    <p class="text-muted">Precisam de clareza matemática antes de realizar um alto investimento na troca do veículo ou na instalação de placas solares, buscando economia a longo prazo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. RESULTADOS ESPERADOS -->
+    <section id="resultados" class="bg-light-main">
+        <div class="container">
+            <h2 class="text-center mb-5 text-main fw-bold">Resultados Esperados</h2>
+            <div class="row text-center">
+                <!-- [ALTERAR AQUI]: Altere os resultados, métricas e melhorias abaixo -->
+                <div class="col-md-4">
+                    <h3 class="text-main">Educação</h3>
+                    <p class="text-dark">Esclarecimento prático sobre os custos ocultos de veículos a combustão.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-main">Adoção</h3>
+                    <p class="text-dark">Incentivo baseado em dados reais para a transição energética automotiva.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="text-main">Impacto</h3>
+                    <p class="text-dark">Redução mensurável na emissão de gases de efeito estufa por usuário.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. ODS RELACIONADO -->
+   <section id="ods">
+        <div class="container text-center">
+            <h2 class="mb-5 text-main fw-bold">ODS Relacionados</h2>
+            
+                        <div class="row justify-content-center mb-5">
+                <div class="col-md-8">
+                    <p class="text-muted fs-5 text-md-center text-start">
+                        O projeto desenvolve uma plataforma para comparar custos, consumo energético e impactos ambientais entre veículos elétricos e a combustão com uso de energia solar fotovoltaica. A proposta está alinhada às ODS 7, 11 e 13 da ONU, voltadas à energia limpa, cidades sustentáveis e combate às mudanças climáticas (ONU, 2015).
+                    </p>
+                </div>
+            </div>
+
+                        <div class="row justify-content-center align-items-center gap-4">
+                <div class="col-auto">
+                    <img src="/Assets/ods7.webp" alt="ODS 7 - Energia Limpa e Acessível" class="img-fluid rounded shadow-sm" style="max-width: 130px;">
+                </div>
+                <div class="col-auto">
+                    <img src="/Assets/ods11.webp" alt="ODS 11 - Cidades e Comunidades Sustentáveis" class="img-fluid rounded shadow-sm" style="max-width: 130px;">
+                </div>
+                <div class="col-auto">
+                    <img src="/Assets/ods13.jpg" alt="ODS 13 - Ação Contra a Mudança Global do Clima" class="img-fluid rounded shadow-sm" style="max-width: 130px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. EQUIPE -->ods
+  <section id="equipe" class="bg-light">
+        <div class="container text-center">
+            <h2 class="mb-5 text-main fw-bold">A Equipe</h2>
+            <div class="row justify-content-center">
+                
+                                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="/Assets/kaua.jpeg" alt="Foto" class="rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover;">
+                            <h5 class="card-title text-dark">Kauã Garcia</h5>
+                            <p class="card-text text-muted small">Product Owner</p>
+                            <a href="https://github.com/garcia18850" class="text-dark me-2 fs-5"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/kau%C3%A3-garcia-francisco-5a6212252/" class="text-main fs-5"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="/Assets/giovani.jpeg" alt="Foto" class="rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover;">
+                            <h5 class="card-title text-dark">Giovanni Valente</h5>
+                            <p class="card-text text-muted small">Designer</p>
+                            <a href="https://github.com/kouxz" class="text-dark me-2 fs-5"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/giovanni-pereira-valente-8a15a72b7/" class="text-main fs-5"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="/Assets/nicole.jpeg" alt="Foto" class="rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover;">
+                            <h5 class="card-title text-dark">Nicole Kerne</h5>
+                            <p class="card-text text-muted small">Desenvolvedora Frontend</p>
+                            <a href="#" class="text-dark me-2 fs-5"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/nicole-kerne-302bb6269/" class="text-main fs-5"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="/Assets/fernanda.jpeg" alt="Foto" class="rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover;">
+                            <h5 class="card-title text-dark">Fernanda Kedouk</h5>
+                            <p class="card-text text-muted small">Scrum Master</p>
+                            <a href="#" class="text-dark me-2 fs-5"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/fernandakedouk/" class="text-main fs-5"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <img src="/Assets/duda.jpeg" alt="Foto" class="rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover;">
+                            <h5 class="card-title text-dark">Maria Eduarda Souza</h5>
+                            <p class="card-text text-muted small">Desenvolvedora Backend</p>
+                            <a href="#" class="text-dark me-2 fs-5"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/in/maria-eduarda-souza-santos-512b8b228/" class="text-main fs-5"><i class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>        
+         </div>
+    </section>
+    <!-- 12. DEMONSTRAÇÃO (VÍDEO DO YOUTUBE) -->
+    <section id="demonstracao">
+        <div class="container text-center">
+            <h2 class="mb-5 text-main fw-bold">Demonstração Pública</h2>
+            <p class="text-dark mb-4">Confira o funcionamento do sistema em nosso vídeo oficial.</p>
+            
+            <div class="ratio ratio-16x9 mx-auto shadow-sm rounded overflow-hidden" style="max-width: 800px;">
+                <!-- 
+                    [ALTERAR AQUI - VÍDEO]: 
+                    Para colocar o seu vídeo, pegue o link dele no YouTube.
+                    Exemplo: Se o link for https://www.youtube.com/watch?v=dQw4w9WgXcQ
+                    Você vai copiar SÓ o código final (dQw4w9WgXcQ) e colar depois do "embed/" ali embaixo.
+                -->
+                <iframe 
+                    src="https://www.youtube.com/embed/qH4WMlid-HM" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. DOCUMENTAÇÃO -->
+    <section id="documentacao" class="bg-main text-white">
+        <div class="container text-center">
+            <h2 class="mb-5 fw-bold text-white">Acesso e Documentação</h2>
+            <div class="d-flex justify-content-center flex-wrap gap-4">
+                <!-- [ALTERAR AQUI]: Substitua o '#' pelo link do GitHub -->
+                <a href="https://github.com/kouxz/beecode-e-good-startup-one" class="btn btn-light btn-lg text-dark fw-bold"><i class="bi bi-github"></i> Repositório</a>
+                
+                <!-- [ALTERAR AQUI]: Substitua o '#' pelo link do Trello -->
+                <a href="https://trello.com/c/gqZADxoV/32-reposit%C3%B3rios-remotos" class="btn btn-light btn-lg text-primary fw-bold"><i class="bi bi-trello"></i> Quadro Trello</a>
+                
+                <!-- [ALTERAR AQUI]: Substitua o '#' pelo link da Documentação (ex: PDF ou Notion) -->
+                <a href="#" class="btn btn-light btn-lg text-danger fw-bold"><i class="bi bi-file-earmark-text"></i> Documentação</a>
+                
+                <!-- [ALTERAR AQUI]: Substitua o '#' pelo link do Google Drive -->
+                <a href="https://drive.google.com/drive/folders/1Rtm2zMiD5E3J7tQwAa5g7lLQIUUijSZD?hl=pt-br" class="btn btn-light btn-lg text-success fw-bold"><i class="bi bi-google"></i> Pasta Drive</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. RODAPÉ -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-1"><strong>Faculdade de Engenharia de Sorocaba (FACENS)</strong></p>
+            <p class="mb-1 text-light">Curso de Análise e Desenvolvimento de Sistemas</p>
+            <!-- [ALTERAR AQUI]: Ajuste o semestre se necessário -->
+            <p class="mb-3 text-secondary">Mostra de Projetos - 4º Semestre / 2026</p>
+            <p class="small mb-0">&copy; 2026 E-Good. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
